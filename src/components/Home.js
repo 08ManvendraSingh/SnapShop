@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Slider from "react-slick";
 import SamplePrevArrow from "./SamplePrevArrow";
 import SampleNextArrow from "./SampleNextArrow";
 import Product from "./Product";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../utils/productSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
+  const products = useSelector((store) => store?.product?.data);
+  console.log(products);
+
   const settings = {
     infinite: true,
     speed: 500,

@@ -1,23 +1,44 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import About from "./components/About";
 import Cart from "./components/Cart";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import NavbarBottom from "./components/NavbarBottom";
 import Shop from "./components/Shop";
+import Body from "./components/Body";
+
+const appRoute = createBrowserRouter([
+  {
+    path: "/",
+    element: <Body />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <NavbarBottom />
-      {/* <Home /> */}
-      {/* <Contact /> */}
-      {/* <About /> */}
-      {/* <Cart /> */}
-      <Shop />
-      <Footer />
+      <RouterProvider router={appRoute} />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
+import { navItems } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,7 +12,7 @@ const Navbar = () => {
       <nav className="h-full px-4 max-w-container mx-auto relative">
         <div className="flex items-center justify-between h-full">
           <div>
-            <img className="w-20 object-cover" imgSrc="" />
+            <img className="w-20 object-cover" src="../../Images/logo.png" />
           </div>
           <div>
             <ul
@@ -19,21 +21,13 @@ const Navbar = () => {
               transition={{ duration: 0.5 }}
               className="flex items-center w-auto z-50 p-0 gap-2"
             >
-              <li className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0">
-                Home
-              </li>
-              <li className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0">
-                Shop
-              </li>
-              <li className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0">
-                About
-              </li>
-              <li className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0">
-                Contact
-              </li>
-              <li className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0">
-                Cart
-              </li>
+              {navItems.map((x, i) => (
+                <Link to={x?.link} key={x?.id}>
+                  <li className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0">
+                    {x?.name}
+                  </li>
+                </Link>
+              ))}
             </ul>
 
             {/* <HiMenuAlt2

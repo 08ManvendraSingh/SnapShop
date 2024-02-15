@@ -1,6 +1,7 @@
 import React from "react";
-import { FaFacebook, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { AiOutlineCopyright } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,42 +18,19 @@ const Footer = () => {
                 sint ab ullam, numquam nesciunt in.
               </p>
               <ul className="flex items-center gap-2">
-                <a
-                  href="https://www.youtube.com/@reactjsBD"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <li className="w-7 h-7 bg-[#262626] text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                    <FaYoutube />
-                  </li>
-                </a>
-                <a
-                  href="https://github.com/noorjsdivs"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <Link to="https://github.com/08ManvendraSingh" target="_blank">
                   <li className="w-7 h-7 bg-[#262626] text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
                     <FaGithub />
                   </li>
-                </a>
-                <a
-                  href="https://www.facebook.com/Noorlalu143/"
+                </Link>
+                <Link
+                  to="https://www.linkedin.com/in/manvendra-singh08/"
                   target="_blank"
-                  rel="noreferrer"
-                >
-                  <li className="w-7 h-7 bg-[#262626] text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
-                    <FaFacebook />
-                  </li>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/noor-mohammad-ab2245193/"
-                  target="_blank"
-                  rel="noreferrer"
                 >
                   <li className="w-7 h-7 bg-[#262626] text-gray-100 hover:text-white cursor-pointer text-lg rounded-full flex justify-center items-center hover:bg-black duration-300">
                     <FaLinkedin />
                   </li>
-                </a>
+                </Link>
               </ul>
             </div>
           </div>
@@ -120,7 +98,7 @@ const Footer = () => {
               </div>
               <img
                 className={"w-[80%] lg:w-[60%] mx-auto mt-6"}
-                src="https://orebishopping.reactbd.com/static/media/payment.3e00cc601c9e7fc1e7d3.png"
+                src="../../Images/payment.png"
               />
             </div>
           </div>

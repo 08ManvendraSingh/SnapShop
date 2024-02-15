@@ -25,3 +25,108 @@ export const navItems = [
     link: "/cart",
   },
 ];
+export const items = [
+  {
+    id: 990,
+    title: "New Arrivals",
+    icons: true,
+  },
+  {
+    id: 991,
+    title: "Gudgets",
+  },
+  {
+    id: 992,
+    title: "Accessories",
+    icons: true,
+  },
+  {
+    id: 993,
+    title: "Electronics",
+  },
+  {
+    id: 994,
+    title: "Others",
+  },
+];
+export const colors = [
+  {
+    id: 9001,
+    title: "Green",
+    base: "#22c55e",
+  },
+  {
+    id: 9002,
+    title: "Gray",
+    base: "#a3a3a3",
+  },
+  {
+    id: 9003,
+    title: "Red",
+    base: "#dc2626",
+  },
+  {
+    id: 9004,
+    title: "Yellow",
+    base: "#f59e0b",
+  },
+  {
+    id: 9005,
+    title: "Blue",
+    base: "#3b82f6",
+  },
+];
+export const brands = [
+  {
+    id: 9006,
+    title: "Apple",
+  },
+  {
+    id: 9007,
+    title: "Ultron",
+  },
+  {
+    id: 9008,
+    title: "Unknown",
+  },
+  {
+    id: 9009,
+    title: "Shoppers Home",
+  },
+  {
+    id: 9010,
+    title: "Hoichoi",
+  },
+];
+export const priceList = [
+  {
+    id: 950,
+    priceOne: 0.0,
+    priceTwo: 49.99,
+  },
+  {
+    id: 951,
+    priceOne: 50.0,
+    priceTwo: 99.99,
+  },
+  {
+    id: 952,
+    priceOne: 100.0,
+    priceTwo: 199.99,
+  },
+  {
+    id: 953,
+    priceOne: 200.0,
+    priceTwo: 399.99,
+  },
+  {
+    id: 954,
+    priceOne: 400.0,
+    priceTwo: 599.99,
+  },
+  {
+    id: 955,
+    priceOne: 600.0,
+    priceTwo: 1000.0,
+  },
+];

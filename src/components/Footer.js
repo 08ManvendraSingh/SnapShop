@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="w-full bg-[#F5F5F3] py-20">
+      <div className="w-full px-4 bg-[#F5F5F3] py-20">
         <div className="max-w-container mx-auto grid grid-cols-1 md:grid-cols-2  xl:grid-cols-6 px-4 gap-10">
           <div className="col-span-2">
             <h3 className="text-xl font-bodyFont font-semibold mb-6">
-              More about Orebi Shop
+              More about SnapShop
             </h3>
             <div className="flex flex-col gap-6">
               <p className="text-base w-full xl:w-[80%]">
@@ -110,7 +110,7 @@ const Footer = () => {
             <span className="text-md mr-[1px] mt-[2px] md:mt-0 text-center hidden md:inline-flex">
               <AiOutlineCopyright />
             </span>
-            Copyright 2024 | Orebi shopping | All Rights Reserved |
+            Copyright 2024 | SnapShop | All Rights Reserved |
             <span className="ml-1 font-medium group-hover:text-[#262626]">
               Powered by Manvendra
             </span>

@@ -11,7 +11,7 @@ const Contact = () => {
           <div>
             <p className="text-base font-titleFont font-semibold px-2">Name</p>
             <input
-              className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
+              className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#262626]"
               type="text"
               placeholder="Enter your name here"
             />
@@ -19,7 +19,7 @@ const Contact = () => {
           <div>
             <p className="text-base font-titleFont font-semibold px-2">Email</p>
             <input
-              className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor"
+              className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#262626]"
               type="email"
               placeholder="Enter your name here"
             />
@@ -31,12 +31,12 @@ const Contact = () => {
             <textarea
               cols="30"
               rows="3"
-              className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-primeColor resize-none"
+              className="w-full py-1 border-b-2 px-2 text-base font-medium placeholder:font-normal placeholder:text-sm outline-none focus-within:border-[#262626] resize-none"
               type="text"
               placeholder="Enter your name here"
             ></textarea>
           </div>
-          <button className="w-44 bg-primeColor text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-black hover:text-white duration-200">
+          <button className="w-44 bg-[#262626] text-gray-200 h-10 font-titleFont text-base tracking-wide font-semibold hover:bg-black hover:text-white duration-200">
             Post
           </button>
         </div>

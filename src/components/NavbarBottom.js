@@ -1,9 +1,10 @@
 import React from "react";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NavbarBottom = () => {
   return (
-    <div className="w-full bg-[#F5F5F3] relative">
+    <div className="w-full px-4 bg-[#F5F5F3] relative">
       <div className="max-w-container mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full px-4 pb-4 lg:pb-0 h-full lg:h-24">
           <div className="relative w-full lg:w-[600px] h-[50px] text-base text-primeColor bg-white flex items-center gap-2 justify-between px-6 rounded-xl">
@@ -31,7 +32,9 @@ const NavbarBottom = () => {
           </div>
           <div className="flex gap-4 mt-2 lg:mt-0 items-center pr-6 cursor-pointer relative">
             <div className="relative">
-              <FaShoppingCart />
+              <Link to="/cart">
+                <FaShoppingCart />
+              </Link>
               <span className="absolute font-titleFont top-3 -right-2 text-xs w-4 h-4 flex items-center justify-center rounded-full bg-primeColor text-white">
                 0
               </span>

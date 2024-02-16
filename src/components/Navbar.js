@@ -13,7 +13,9 @@ const Navbar = () => {
       <nav className="h-full px-4 max-w-container mx-auto relative">
         <div className="flex items-center justify-between h-full">
           <div>
-            <img className="w-20 object-cover" src="../../Images/logo.png" />
+            <Link to="/">
+              <img className="w-20 object-cover" src="../../Images/logo.png" />
+            </Link>
           </div>
           <div>
             <ul

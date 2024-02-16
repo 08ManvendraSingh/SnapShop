@@ -64,15 +64,21 @@ const Home = () => {
       {/* sales */}
       <div className="py-20 flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-10">
         <div className="w-full md:w-2/3 lg:w-1/2 h-full">
-          <img className="h-full w-full object-cover" src={SALE_IMG1} />
+          <Link to="/shop">
+            <img className="h-full w-full object-cover" src={SALE_IMG1} />
+          </Link>
         </div>
         <div className="w-full md:w-2/3 lg:w-1/2 h-auto flex flex-col gap-4 lg:gap-10">
-          <div className="h-1/2 w-full">
-            <img className="h-full w-full object-cover" src={SALE_IMG2} />
-          </div>
-          <div className="h-1/2 w-full">
-            <img className="h-full w-full object-cover" src={SALE_IMG3} />
-          </div>
+          <Link to="/shop">
+            <div className="h-1/2 w-full">
+              <img className="h-full w-full object-cover" src={SALE_IMG2} />
+            </div>
+          </Link>
+          <Link to="/shop">
+            <div className="h-1/2 w-full">
+              <img className="h-full w-full object-cover" src={SALE_IMG3} />
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -81,9 +87,7 @@ const Home = () => {
         <div className="text-3xl font-semibold pb-6">New Arrivals</div>
         <Slider {...settings}>
           {data[0]?.products?.slice(0, 4)?.map((x) => (
-            <Link to="/shop" key={x?.id}>
-              <Product info={x} />
-            </Link>
+            <Product key={x?.id} info={x} />
           ))}
         </Slider>
       </div>
@@ -93,9 +97,7 @@ const Home = () => {
         <div className="text-3xl font-semibold pb-6">Our Bestsellers</div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
           {data[0]?.products?.slice(0, 4)?.map((x) => (
-            <Link to="/shop" key={x?.id}>
-              <Product info={x} />
-            </Link>
+            <Product key={x?.id} info={x} />
           ))}
         </div>
       </div>
@@ -113,9 +115,11 @@ const Home = () => {
           <p className="text-base font-normal text-[#262626] max-w-[600px] mr-4">
             {data[0]?.products[5]?.description}
           </p>
-          <button className="bg-[#262626] text-white text-lg font-bodyFont w-[185px] h-[50px] hover:bg-black duration-300 font-bold">
-            Shop Now
-          </button>
+          <Link to="/shop">
+            <button className="bg-[#262626] text-white text-lg font-bodyFont w-[185px] h-[50px] hover:bg-black duration-300 font-bold">
+              Shop Now
+            </button>
+          </Link>
         </div>
       </div>
 
@@ -124,9 +128,7 @@ const Home = () => {
         <div className="text-3xl font-semibold pb-6">Special Offers</div>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 xl:grid-cols-4 gap-10">
           {data[0]?.products?.slice(5, 9)?.map((x) => (
-            <Link to="/shop" key={x?.id}>
-              <Product info={x} />
-            </Link>
+            <Product info={x} key={x?.id} />
           ))}
         </div>
       </div>

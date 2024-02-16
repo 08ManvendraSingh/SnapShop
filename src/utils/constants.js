@@ -25,109 +25,34 @@ export const navItems = [
     link: "/cart",
   },
 ];
-export const items = [
+
+export const shopSideItems = [
   {
-    id: 990,
-    title: "New Arrivals",
-    icons: true,
+    id: 1,
+    title: "Shop by Category",
+    items: [
+      "smartphones",
+      "laptops",
+      "fragrances",
+      "skincare",
+      "groceries",
+      "home-decoration",
+    ],
   },
   {
-    id: 991,
-    title: "Gudgets",
+    id: 2,
+    title: "Shop by Ratings",
+    items: ["4.5", "4.6", "4.7", "4.8", "4.9"],
   },
   {
-    id: 992,
-    title: "Accessories",
-    icons: true,
+    id: 3,
+    title: "Shop by Brands",
+    items: ["Apple", "Samsung", "OPPO", "Huawei", "Infinix"],
   },
   {
-    id: 993,
-    title: "Electronics",
-  },
-  {
-    id: 994,
-    title: "Others",
-  },
-];
-export const colors = [
-  {
-    id: 9001,
-    title: "Green",
-    base: "#22c55e",
-  },
-  {
-    id: 9002,
-    title: "Gray",
-    base: "#a3a3a3",
-  },
-  {
-    id: 9003,
-    title: "Red",
-    base: "#dc2626",
-  },
-  {
-    id: 9004,
-    title: "Yellow",
-    base: "#f59e0b",
-  },
-  {
-    id: 9005,
-    title: "Blue",
-    base: "#3b82f6",
-  },
-];
-export const brands = [
-  {
-    id: 9006,
-    title: "Apple",
-  },
-  {
-    id: 9007,
-    title: "Ultron",
-  },
-  {
-    id: 9008,
-    title: "Unknown",
-  },
-  {
-    id: 9009,
-    title: "Shoppers Home",
-  },
-  {
-    id: 9010,
-    title: "Hoichoi",
-  },
-];
-export const priceList = [
-  {
-    id: 950,
-    priceOne: 0.0,
-    priceTwo: 49.99,
-  },
-  {
-    id: 951,
-    priceOne: 50.0,
-    priceTwo: 99.99,
-  },
-  {
-    id: 952,
-    priceOne: 100.0,
-    priceTwo: 199.99,
-  },
-  {
-    id: 953,
-    priceOne: 200.0,
-    priceTwo: 399.99,
-  },
-  {
-    id: 954,
-    priceOne: 400.0,
-    priceTwo: 599.99,
-  },
-  {
-    id: 955,
-    priceOne: 600.0,
-    priceTwo: 1000.0,
+    id: 4,
+    title: "Shop by Price",
+    items: ["0-500", "500-800", "800-1000", "1000-1500", "1500+"],
   },
 ];
 

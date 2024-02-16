@@ -130,3 +130,12 @@ export const priceList = [
     priceTwo: 1000.0,
   },
 ];
+
+export const SALE_IMG1 =
+  "https://orebishopping.reactbd.com/static/media/saleImgOne.5fd9a91421b8b3d52f04.webp";
+
+export const SALE_IMG2 =
+  "https://orebishopping.reactbd.com/static/media/saleImgTwo.ecb733524e878406c281.webp";
+
+export const SALE_IMG3 =
+  "https://orebishopping.reactbd.com/static/media/saleImgThree.7f55d28e41e547163b6c.webp";

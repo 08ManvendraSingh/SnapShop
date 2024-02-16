@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
 
   return (
     <div className="w-full h-20 px-4 bg-white sticky top-0 z-50 border-b-[1px] border-b-gray-200">
@@ -22,8 +23,14 @@ const Navbar = () => {
               className="flex items-center w-auto z-50 p-0 gap-2"
             >
               {navItems.map((x, i) => (
-                <Link to={x?.link} key={x?.id}>
-                  <li className="flex font-normal hover:font-bold w-20 h-6 justify-center items-center px-12 text-base text-[#767676] hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0">
+                <Link onClick={() => setActiveTab(i)} to={x?.link} key={x?.id}>
+                  <li
+                    className={`flex ${
+                      activeTab === i
+                        ? "text-[#262626] font-bold underline underline-offset-[4px] decoration-[1px]"
+                        : "text-[#767676] font-normal"
+                    } hover:font-bold w-20 h-6 justify-center items-center px-12 text-base hover:underline underline-offset-[4px] decoration-[1px] hover:text-[#262626] md:border-r-[2px] border-r-gray-300 hoverEffect last:border-r-0`}
+                  >
                     {x?.name}
                   </li>
                 </Link>

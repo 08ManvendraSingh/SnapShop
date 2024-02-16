@@ -6,12 +6,12 @@ import Footer from "./Footer";
 
 const Body = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <NavbarBottom />
       <Outlet />
       <Footer />
-    </div>
+    </>
   );
 };
 

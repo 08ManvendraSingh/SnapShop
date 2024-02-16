@@ -4,8 +4,12 @@ import { BsGridFill } from "react-icons/bs";
 import { ImList } from "react-icons/im";
 import { GoTriangleDown } from "react-icons/go";
 import Product from "./Product";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
+  const { data } = useSelector((store) => store?.product);
+
   return (
     <div className="max-w-container mx-auto px-4">
       <div className="w-full h-full flex pb-20 gap-10">
@@ -63,9 +67,9 @@ const Shop = () => {
 
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-4 lg:gap-10">
-              <div className="w-full">
-                <Product />
-              </div>
+              {data[0]?.products?.slice(0, 10)?.map((x) => (
+                <Product key={x?.id} info={x} />
+              ))}
             </div>
           </div>
         </div>

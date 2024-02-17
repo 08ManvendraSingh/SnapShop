@@ -22,8 +22,6 @@ const Home = () => {
     <h2>Loading ....</h2>;
   }
 
-  console.log(data);
-
   const settings = {
     infinite: true,
     speed: 500,

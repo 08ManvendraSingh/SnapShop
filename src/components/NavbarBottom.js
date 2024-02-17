@@ -1,13 +1,17 @@
 import React from "react";
 import { FaSearch, FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const NavbarBottom = () => {
+  const cartCount = useSelector((store) => store.cart?.items);
+  console.log(cartCount.length);
+
   return (
     <div className="w-full px-4 bg-[#F5F5F3] relative">
       <div className="max-w-container mx-auto">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full px-4 pb-4 lg:pb-0 h-full lg:h-24">
-          <div className="relative w-full lg:w-[600px] h-[50px] text-base text-primeColor bg-white flex items-center gap-2 justify-between px-6 rounded-xl">
+          <div className="relative w-full lg:w-[600px] h-[50px] text-base text-[#262626] bg-white flex items-center gap-2 justify-between px-6 rounded-xl">
             <input
               className="flex-1 h-full outline-none placeholder:text-[#C4C4C4] placeholder:text-[14px]"
               type="text"
@@ -24,7 +28,7 @@ const NavbarBottom = () => {
                   <p className="text-xs">desc</p>
                   <p className="text-sm">
                     Price:
-                    <span className="text-primeColor font-semibold">$10</span>
+                    <span className="text-[#262626] font-semibold">$10</span>
                   </p>
                 </div>
               </div>
@@ -35,8 +39,8 @@ const NavbarBottom = () => {
               <Link to="/cart">
                 <FaShoppingCart />
               </Link>
-              <span className="absolute font-titleFont top-3 -right-2 text-xs w-4 h-4 flex items-center justify-center rounded-full bg-primeColor text-white">
-                0
+              <span className="absolute font-titleFont top-3 -right-2 text-xs w-4 h-4 flex items-center justify-center rounded-full bg-[#262626] text-white">
+                {cartCount.length > 0 ? cartCount.length : 0}
               </span>
             </div>
           </div>

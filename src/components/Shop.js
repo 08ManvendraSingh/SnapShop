@@ -5,7 +5,6 @@ import { ImList } from "react-icons/im";
 import { GoTriangleDown } from "react-icons/go";
 import Product from "./Product";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 
 const Shop = () => {
   const { data } = useSelector((store) => store?.product);

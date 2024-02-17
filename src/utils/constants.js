@@ -5,22 +5,22 @@ export const navItems = [
     link: "/",
   },
   {
-    id: 1,
+    id: 2,
     name: "Shop",
     link: "/shop",
   },
   {
-    id: 1,
+    id: 3,
     name: "About",
     link: "/about",
   },
   {
-    id: 1,
+    id: 4,
     name: "Contact",
     link: "/contact",
   },
   {
-    id: 1,
+    id: 5,
     name: "Cart",
     link: "/cart",
   },

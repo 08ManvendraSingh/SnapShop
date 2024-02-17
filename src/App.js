@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Body from "./components/Body";
+import ProductDetail from "./components/ProductDetail";
 
 const appRoute = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const appRoute = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
+      },
+      {
+        path: "/product/:pid",
+        element: <ProductDetail />,
       },
       {
         path: "/cart",

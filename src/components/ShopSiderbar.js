@@ -36,7 +36,7 @@ const ShopSiderbar = () => {
   return (
     <div className="w-full flex flex-col gap-6">
       {shopSideItems.map((x) => (
-        <ItemsList info={x} />
+        <ItemsList key={x?.id} info={x} />
       ))}
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiCaretDown, BiCaretUp } from "react-icons/bi";
 import { shopSideItems } from "../utils/constants";
 
-const ItemsList = ({ info }) => {
+const ItemsList = ({ info, filterData }) => {
   const [accordian, setAccordian] = useState(true);
 
   return (
@@ -20,6 +20,7 @@ const ItemsList = ({ info }) => {
             {info?.items.map((a, i) => (
               <li
                 key={i}
+                onClick={() => filterData([a, info?.title])}
                 className="border-b-[1px] border-b-[#F0F0F0] pb-2 flex items-center justify-between cursor-pointer"
               >
                 {a}
@@ -32,11 +33,11 @@ const ItemsList = ({ info }) => {
   );
 };
 
-const ShopSiderbar = () => {
+const ShopSiderbar = ({ filterData }) => {
   return (
     <div className="w-full flex flex-col gap-6">
       {shopSideItems.map((x) => (
-        <ItemsList key={x?.id} info={x} />
+        <ItemsList key={x?.id} info={x} filterData={filterData} />
       ))}
     </div>
   );

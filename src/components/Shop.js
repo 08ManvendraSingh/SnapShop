@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ShopSiderbar from "./ShopSiderbar";
 import { BsGridFill } from "react-icons/bs";
 import { ImList } from "react-icons/im";
@@ -8,12 +8,35 @@ import { useSelector } from "react-redux";
 
 const Shop = () => {
   const { data } = useSelector((store) => store?.product);
+  const [filtData, setFiltData] = useState([]);
+
+  const filterData = ([a, cat]) => {
+    if (cat.split(" ")[2].toLowerCase() === "category") {
+      const Data = data[0]?.products.filter((x) =>
+        x?.category?.toLowerCase()?.includes(a?.toLowerCase())
+      );
+      setFiltData(Data);
+    } else if (cat.split(" ")[2].toLowerCase() === "rating") {
+      const Data = data[0]?.products.filter((x) => x?.rating > a);
+      setFiltData(Data);
+    } else if (cat.split(" ")[2].toLowerCase() === "brand") {
+      const Data = data[0]?.products.filter(
+        (x) => x?.brand?.toLowerCase() === a?.toLowerCase()
+      );
+      setFiltData(Data);
+    } else if (cat.split(" ")[2].toLowerCase() === "price") {
+      const Data = data[0]?.products.filter(
+        (x) => x?.price >= a.split("-")[0] && x?.price < a.split("-")[1]
+      );
+      setFiltData(Data);
+    }
+  };
 
   return (
     <div className="max-w-container mx-auto px-4">
       <div className="w-full h-full flex pb-20 gap-10">
         <div className="w-[20%] lg:w-[25%] hidden md:inline-flex h-full">
-          <ShopSiderbar />
+          <ShopSiderbar filterData={filterData} />
         </div>
         <div className="w-full md:w-[80%] lg:w-[75%] h-full flex flex-col gap-10">
           <div className="w-full flex flex-col md:flex-row md:items-center justify-between">
@@ -66,9 +89,11 @@ const Shop = () => {
 
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 md:gap-4 lg:gap-10">
-              {data[0]?.products?.slice(0, 10)?.map((x) => (
-                <Product key={x?.id} info={x} />
-              ))}
+              {filtData.length < 1
+                ? data[0]?.products
+                    ?.slice(0, 10)
+                    ?.map((x) => <Product key={x?.id} info={x} />)
+                : filtData.map((x) => <Product key={x?.id} info={x} />)}
             </div>
           </div>
         </div>

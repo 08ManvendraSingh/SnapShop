@@ -41,18 +41,18 @@ export const shopSideItems = [
   },
   {
     id: 2,
-    title: "Shop by Ratings",
+    title: "Shop by Rating",
     items: ["4.5", "4.6", "4.7", "4.8", "4.9"],
   },
   {
     id: 3,
-    title: "Shop by Brands",
+    title: "Shop by Brand",
     items: ["Apple", "Samsung", "OPPO", "Huawei", "Infinix"],
   },
   {
     id: 4,
     title: "Shop by Price",
-    items: ["0-500", "500-800", "800-1000", "1000-1500", "1500+"],
+    items: ["0-500", "500-800", "800-1000", "1000-1500", "1500-5000"],
   },
 ];
 

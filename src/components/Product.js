@@ -30,7 +30,7 @@ const Product = ({ info }) => {
                 <FaShoppingCart />
               </span>
             </li>
-            <Link to={"/product/" + info?.id}>
+            <Link to={"/shop/" + info?.id}>
               <li className="text-[#767676] hover:text-[#262626] text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-[#262626] flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full">
                 View Details
                 <span className="text-lg">

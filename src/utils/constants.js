@@ -57,7 +57,7 @@ export const shopSideItems = [
 ];
 
 export const SALE_IMG1 =
-  "https://orebishopping.reactbd.com/static/media/saleImgOne.5fd9a91421b8b3d52f04.webp";
+  "https://m.media-amazon.com/images/I/51+FHE4utnL._AC_UF1000,1000_QL80_.jpg";
 
 export const SALE_IMG2 =
   "https://orebishopping.reactbd.com/static/media/saleImgTwo.ecb733524e878406c281.webp";

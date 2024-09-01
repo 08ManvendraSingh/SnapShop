@@ -1,12 +1,29 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdOutlineLabelImportant } from "react-icons/md";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addItems } from "../utils/cartSlice";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Product = ({ info }) => {
   const dispatch = useDispatch();
+  const products = useSelector((store) => store?.cart?.items);
+  const [val,setVal] = useState()
+  console.log(products);
+
+  const AddProduct =(info)=>{
+
+    dispatch(addItems(info))
+
+    setVal(info.id)
+
+  }
+
+  var a = products.filter((x)=> x.sku)
+
+  console.log('val',val)
+
 
   return (
     <div className="w-full relative group">
@@ -22,10 +39,13 @@ const Product = ({ info }) => {
         <div className="w-full h-32 absolute bg-white -bottom-[130px] group-hover:bottom-0 duration-700">
           <ul className="w-full h-full flex flex-col items-end justify-center gap-2 font-titleFont px-2 border-l border-r">
             <li
-              onClick={() => dispatch(addItems(info))}
+            onClick={()=> AddProduct(info)}
+              // onClick={() =>  dispatch(addItems(info))}
               className="text-[#767676] hover:text-[#262626] text-sm font-normal border-b-[1px] border-b-gray-200 hover:border-b-[#262626] flex items-center justify-end gap-2 hover:cursor-pointer pb-1 duration-300 w-full"
             >
-              Add to Cart
+              {/* {products.filter((x)=>x.id == info.id)?'1':'Add to cart'} */}
+              {console.log('aaa',a)}
+              {val == info.id ? '1' : 'Add to cart' }
               <span>
                 <FaShoppingCart />
               </span>
